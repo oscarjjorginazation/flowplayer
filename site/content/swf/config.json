@@ -1,0 +1,14 @@
+{
+  "debug": true,
+  "log": {
+    "level": "debug"
+  },
+  "clip": {
+    "url": "http://d253c4ja9jigvu.cloudfront.net/videos/4c50424cb35ea827c0000005_5123849b11581e44d6000001_streamio-hq-480p.mp4"
+  },
+  "plugins": {
+    "streamio": {
+      "url": "flowplayer.streamio-1.0.swf"
+    }
+  }
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>FlowPlayer Test</title>
+    <meta property="og:title" content="Awesome" />
+    <meta property="og:type" content="video" />
+    <meta property="og:description" content="Description of the awesome movie. Should be not too short." />
+    <meta property="og:image" content="https://d253c4ja9jigvu.cloudfront.net/images/4c50424cb35ea827c0000005_5108ed7c11581e0b5400331c_original.jpg" />
+    <meta property="og:site_name" content="Streamio" />
+    <meta property="og:video" content="http://perfectskies.com/opengraph/flowplayer-3.2.16.swf?config=%7B%22clip%22%3A%7B%22provider%22%3A%20%22streamio%22%7D%2C%20%22plugins%22%3A%7B%22streamio%22%3A%7B%22url%22%3A%20%22flowplayer.streamio-1.0.swf%22%2C%20%22videoId%22%3A%20%2250b7982e11581e06b5003371%22%7D%7D%7D">
+    <meta property="og:video:width" content="640">
+    <meta property="og:video:height" content="480">
+    <meta property="og:video:type" content="application/x-shockwave-flash">
+    <script type="text/javascript" src="flowplayer-3.2.12.min.js"></script>
+  </head>
+  <body>
+    <div id="player" style="width:640px; height:480px"></div>
+    <script>
+      var cachebuster = new Date().valueOf()
+      flowplayer("player", "flowplayer-3.2.16.swf", {
+        debug: true,
+        log: { level: "warn" },
+        clip: { provider: "streamio", autoPlay: false },
+        play: null,
+        canvas: {
+          backgroundColor: "#FFFFFF"
+        },
+        plugins: {
+          streamio: {
+            url: "flowplayer.streamio-1.0.swf?"+cachebuster,
+            videoId: "5162def0603db8909d000002",
+            host: "staging.streamio.com"
+          },
+          controls: {
+            url: "flowplayer.controls-streamio.swf?"+cachebuster
+          }
+        }
+      })
+    </script>
+
+    <!-- <embed type="application/x-shockwave-flash" src="flowplayer-3.2.16.swf?config=%7B%22clip%22%3A%22http%3A%2F%2Fd253c4ja9jigvu.cloudfront.net%2Fvideos%2F4c50424cb35ea827c0000005_5123849b11581e44d6000001_streamio-hq-480p.mp4%22%7D" width="377" height="283" style="display: block;" id="swf_u_jsonp_2_1g" name="swf_u_jsonp_2_1g" bgcolor="#FFFFFF" quality="high" scale="scale" allowfullscreen="true" allowscriptaccess="never" salign="tl" wmode="opaque" flashvars="width=377&amp;height=283"> -->
+
+    <!-- <embed type="application/x-shockwave-flash" src="flowplayer-3.2.16.swf?config=config.json" width="377" height="283" style="display: block;" id="swf_u_jsonp_2_1g" name="swf_u_jsonp_2_1g" bgcolor="#FFFFFF" quality="high" scale="scale" allowfullscreen="true" allowscriptaccess="never" salign="tl" wmode="opaque" flashvars="width=377&amp;height=283"> -->
+  </body>
+</html>
