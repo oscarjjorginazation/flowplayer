@@ -23,6 +23,9 @@
     <property name="plugin-main-class" value="org/flowplayer/controls/Controls.as" />
     <property name="compiler-define" value="CONFIG::skin,'true' -define=CONFIG::hasSlowMotion,'true'" />
 
+    <target name="build-streamio">
+        <ant antfile="build-streamio.xml" target="build" inheritall="false" />
+    </target>
 
     <target name="build-skinless">
         <ant antfile="build-skinless.xml" target="build" inheritall="false" />
@@ -36,7 +39,7 @@
         <ant antfile="build-air.xml" target="build" inheritall="false" />
     </target>
 
-    <target name="build-all" depends="build, build-skinless, build-tube, build-air" />
+    <target name="build-all" depends="build, build-skinless, build-tube, build-air, build-streamio" />
 
     <target name="zip">
         <echo message="zipping controls" />
@@ -50,6 +53,7 @@
                 <include name="flowplayer.controls-skinless-${version}.swf" />
                 <include name="flowplayer.controls-tube-${version}.swf" />
 				<include name="flowplayer.controls-air-${version}.swf" />
+                <include name="flowplayer.controls-streamio-${version}.swf" />
             </zipfileset>
         </zip>
         <copy file="${dist-dir}/${basename}-${version}.zip" tofile="${dist-dir}/${basename}.zip" overwrite="true" />

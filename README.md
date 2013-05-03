@@ -1,7 +1,4 @@
-
-
 # Flowplayer Flash
-
 
 ## The video player for the web
 
@@ -20,7 +17,9 @@ This is Flowplayer Flash. Flowplayer 5 for HTML5 will be out soon.
 
 ## Building
 
-Follow [these instructions](http://flowplayer.org/documentation/developer/development-environment.html).
+Make sure to have FLEX_HOME set to your flex installation directory and FLEX_HOME/bin in your execution path (we need mxmlc to be available etc).
+
+Then follow [the original instructions](http://flowplayer.org/documentation/developer/development-environment.html).
 
 ## License
 
