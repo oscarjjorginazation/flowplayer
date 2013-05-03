@@ -1,19 +1,8 @@
 # Flowplayer Flash
 
-## The video player for the web
+## Streamio Edition
 
-Flowplayer is an Open Source video player for your website.
-For site owners, developers, hobbyists, businesses and programmers.
-
-This is Flowplayer Flash. Flowplayer 5 for HTML5 will be out soon.
-
-[website](http://flowplayer.org) | [demos](http://flowplayer.org/demos/) | [docs](http://flowplayer.org/documentation/)
-
-## For The Impatient
-
-1. [Download Flowplayer](http://flowplayer.org/download/)
-2. Unzip
-3. Open example/index.html in your Web browser
+At Streamio we use Flowplayer for compatiblility with facebook opengraph video. Be aware that this version of Flowplayer is not as fully featured as our own GoPlayer.
 
 ## Building
 
