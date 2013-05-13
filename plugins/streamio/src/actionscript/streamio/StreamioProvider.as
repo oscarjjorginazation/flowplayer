@@ -46,7 +46,16 @@ package streamio {
     }
 
     override protected function getClipUrl(clip:Clip):String {
-      return protocol + video.transcodings[0].http_uri as String
+      return protocol + highestTranscoding.http_uri as String
+    }
+
+    private function get highestTranscoding():Object {
+      var sortedTranscodings:Array = video.transcodings.sort(function(a, b) {
+        if(a.bitrate > b.bitrate) return -1
+        if(a.bitrate < b.bitrate) return 1
+        return 0
+      })
+      return sortedTranscodings[0]
     }
 
     private function loadStreamioVideo():void {
