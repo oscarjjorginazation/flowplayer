@@ -8,6 +8,9 @@ fsevent.watch "#{Dir.pwd}/plugins/controls/src/flash/streamio", latency: 2 do |d
   puts "#{Time.now} - Recompiling!"
   system "ant -f plugins/controls/build-streamio.xml"
   system "cp plugins/controls/build/flowplayer.controls-streamio* site/content/swf"
-  system "growlnotify -m 'Recompiled!'"
+  system "growlnotify -m 'Skin recompiled!'"
 end
+
+puts "Listening to changes at plugins/controls/src/flash/streamio"
+
 fsevent.run
