@@ -6,9 +6,20 @@ At Streamio we use Flowplayer for compatiblility with facebook opengraph video. 
 
 ## Building
 
+Download [Flex SDK 4.5.1](http://fpdownload.adobe.com/pub/flex/sdk/builds/flex4.5/flex_sdk_4.5.1.21328A.zip).
+
 Make sure to have FLEX_HOME set to your flex installation directory and FLEX_HOME/bin in your execution path (we need mxmlc to be available etc).
 
 Then follow [the original instructions](http://flowplayer.org/documentation/developer/development-environment.html).
+
+### Build Skin
+
+There is a ruby script available to re-compile the streamio skin whenever files are changed.
+
+```bash
+bundle # if you need to install dependencies
+ruby auto-recompile.rb
+```
 
 ## License
 
