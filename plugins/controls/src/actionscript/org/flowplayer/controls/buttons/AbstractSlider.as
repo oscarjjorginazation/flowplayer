@@ -382,7 +382,8 @@ package org.flowplayer.controls.buttons {
 			bar.scaleX = 1;
 			
 			bar.graphics.beginFill(color, alpha);
-			bar.graphics.drawRoundRect(leftEdge, height/2 - barHeight/2, rightEdge - leftEdge, barHeight, barCornerRadius, barCornerRadius);
+			// bar.graphics.drawRoundRect(leftEdge, height/2 - barHeight/2, rightEdge - leftEdge, barHeight, barCornerRadius, barCornerRadius);
+      bar.graphics.drawRect(leftEdge, height/2 - barHeight/2, rightEdge - leftEdge, barHeight);
 			bar.graphics.endFill();
 			
 			if (gradientAlphas) {
@@ -421,7 +422,7 @@ package org.flowplayer.controls.buttons {
 		}
 
 		protected function get barCornerRadius():Number {
-			if (isNaN(_config.borderRadius)) return barHeight/1.5;
+			if (isNaN(_config.borderRadius)) return 0;
 			return _config.borderRadius;
 		}
 
