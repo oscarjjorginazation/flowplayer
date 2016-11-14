@@ -85,6 +85,10 @@ package org.flowplayer.view {
 
 		private var _keyHandler:KeyboardHandler;
 		
+		public function getStage():Stage {
+			return this._stage;
+		}
+		
 		public function FlowplayerBase(
 			stage:Stage, 
 			pluginRegistry:PluginRegistry,
